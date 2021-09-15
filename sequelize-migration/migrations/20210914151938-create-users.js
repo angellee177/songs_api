@@ -12,7 +12,7 @@ module.exports = {
     },
     song_id: {
       type: Sequelize.UUID,
-      alowNull: false
+      alowNull: true
     },
     username: Sequelize.STRING(25),
     first_name: Sequelize.STRING(50),
@@ -23,7 +23,7 @@ module.exports = {
     },
     password: {
       type: Sequelize.STRING(32),
-      allowNull: false
+      allowNull: true
     },
     profile_picture: {
       type: Sequelize.BLOB,

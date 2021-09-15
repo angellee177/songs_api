@@ -12,15 +12,15 @@ module.exports = {
     },
     genre_id: {
       type: Sequelize.UUID,
-      alowNull: false
+      alowNull: true
     },
     artist_id: {
       type: Sequelize.UUID,
-      alowNull: false
+      alowNull: true
     },
     album_id: {
       type: Sequelize.UUID,
-      alowNull: false
+      alowNull: true
     },
     title: Sequelize.TEXT,
     duration: Sequelize.STRING(8),

@@ -21,7 +21,9 @@
   "author": "angellee",
   "license": "ISC",
   "dependencies": {
+    "@apidevtools/swagger-parser": "^10.0.2",
     "babel-register": "^6.26.0",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "eslint": "^7.32.0",
