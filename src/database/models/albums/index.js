@@ -23,7 +23,7 @@ Albums.init({
     artWorkPath: {
         type: Sequelize.STRING
     }
-}, {
+}, { 
     sequelize: connection,
     paranoid: true,
     modelName: 'Albums',

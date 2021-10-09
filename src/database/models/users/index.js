@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize')
-    , connection = require('../../mssqlConnection');
+    , connection = require('../../mssqlConnection')
+    , bcrypt = require('bcryptjs')
+    , saltRounds = 10;
 
 const { Model } = Sequelize;
 
@@ -39,7 +41,10 @@ Users.init({
     },
     password: {
         type: Sequelize.STRING(32),
-        allowNull: true
+        allowNull: true,
+        set(val) {
+            this.setDataValue('password', val ? bcrypt.hashSync(this.password, saltRounds) : null)
+        }
     },
     profilePicture: {
         type: Sequelize.BLOB,
